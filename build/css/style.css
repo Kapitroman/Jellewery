@@ -3,45 +3,73 @@
   src: local("Poppins Regular"), local("Poppins-Regular"), url("../fonts/Poppinsregular.woff2") format("woff2"), url("../fonts/Poppinsregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 @font-face {
   font-family: "Poppins";
   src: local("Poppins Poppins-SemiBoldMedium"), local("Poppins-Medium"), url("../fonts/Poppinspoppins-semiboldmedium.woff2") format("woff2"), url("../fonts/Poppinspoppins-semiboldmedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 @font-face {
   font-family: "Poppins";
   src: local("Poppins Bold"), local("Poppins-Bold"), url("../fonts/Poppinsbold.woff2") format("woff2"), url("../fonts/Poppinsbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 @font-face {
   font-family: "Cormorant Garamond";
   src: local("Cormorant Garamond Italic"), local("CormorantGaramond-Italic"), url("../fonts/Cormorantgaramonditalic.woff2") format("woff2"), url("../fonts/Cormorantgaramonditalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
-}
+  font-display: swap; }
 
 @font-face {
   font-family: "Cormorant Garamond";
   src: local("Cormorant Garamond Semibold"), local("CormorantGaramond-Semibold"), url("../fonts/Cormorantgaramondsemibold.woff2") format("woff2"), url("../fonts/Cormorantgaramondsemibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 @font-face {
   font-family: "Cormorant Garamond";
   src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("../fonts/Cormorantgaramondbold.woff2") format("woff2"), url("../fonts/Cormorantgaramondbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-style: normal; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.modal-show {
+  display: block; }
+
+.body-lock {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 16px; }
