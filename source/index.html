@@ -12,16 +12,65 @@
   <link rel="preload" href="fonts/Cormorantgaramonditalic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Cormorantgaramondbold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body><!--
+<body>
   <div style="display:none">
     <include src="build/img/sprite_auto.svg"></include>
-  </div>-->
+  </div>
   <header class="page-header">
-    <p>Necklace with amethyst</p>
+    <nav class="page-header__navigator menu-opened">
+      <div class="page-header__wrap-position">
+      <div class="page-header__main-menu">
+        <button class="page-header__toggle-menu">
+          <svg class="page-header__icon-menu" width="25" height="16" focusable="false"><use xlink:href="#icon-menu"></use></svg>
+          <span class="visually-hidden">Переключатель меню</span>
+        </button>
+        <div class="page-header__search">
+          <label for="search">
+            <svg class="page-header__icon-search" width="14" height="14" focusable="false"><use xlink:href="#icon-search"></use></svg>
+            <span class="visually-hidden">Поиск</span>
+          </label>
+          <input id="search" name="search" placeholder="Type here to search">
+        </div>
+        <a class="page-header__logo">
+          <svg class="page-header__icon-logo" width="66" height="66" focusable="false"><use xlink:href="#icon-logo"></use></svg>
+          <span class="visually-hidden">Логотип</span>
+        </a>
+        <ul class="page-header__user-menu">
+          <li class="page-header__user-item page-header__user-item--login"><a href="#">Login</a></li>
+          <li class="page-header__user-item">
+            <a href="#">
+              <span>Cart</span><span>0</span>
+              <svg class="page-header__icon-cart" width="18" height="16" focusable="false"><use xlink:href="#icon-cart"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+        <ul class="page-header__menu-list">
+          <li class="page-header__menu-item"><a href="#">What’s new</a></li>
+          <li class="page-header__menu-item"><a href="#">Chokers</a></li>
+          <li class="page-header__menu-item"><a href="#">Necklaces</a></li>
+          <li class="page-header__menu-item"><a href="#">Rings</a></li>
+          <li class="page-header__menu-item"><a href="#">Earrings</a></li>
+        </ul>
+
+      <ul class="page-header__submenu-list">
+        <li class="page-header__submenu-item"><a href="#">About CH</a></li>
+        <li class="page-header__submenu-item"><a href="#">Stores & Hours</a></li>
+        <li class="page-header__submenu-item"><a href="#">Contact Us</a></li>
+      </ul>
+      </div>
+    </nav>
+    <div class="page-header__hero">
+      <div class="page-header__slogan">
+        <p>PERFECTION</p>
+        <span>made to be yours</span>
+      </div>
+    </div>
   </header>
   <main>
     <h1 class="visually-hidden"></h1>
-
+    <p>Necklace with amethyst</p>
   </main>
   <footer class="page-footer">
 

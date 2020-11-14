@@ -27,3 +27,23 @@
   }
 
 })();
+
+(function() {
+
+  var navigator = document.querySelector('.page-header__navigator');
+  var menuButton = navigator.querySelector('.page-header__toggle-menu');
+
+  navigator.classList.remove('menu-opened');
+  menuButton.addEventListener('click', function () {
+    if (navigator.classList.contains('menu-opened')) {
+      navigator.classList.remove('menu-opened');
+    } else {
+      navigator.classList.add('menu-opened');
+    }
+  });
+
+
+
+
+
+})();
