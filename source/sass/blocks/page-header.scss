@@ -1,10 +1,12 @@
+.page-header {
+  padding-bottom: 60px;
+}
+
 .page-header__navigator {
   max-width: 1366px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 6.81%;
-  padding-right: 6.81%;
 }
 
 .page-header__main-menu {
@@ -14,6 +16,8 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 6.81%;
+  padding-right: 6.81%;
   border-bottom: 1px solid #f6f5f4;
 }
 
@@ -134,11 +138,11 @@
   padding-left: 11px;
 }
 
-.page-header__menu-item + .page-header__menu-item {
+.page-header__menu-list li + li {
   margin-left: 35px;
 }
 
-.page-header__menu-item a {
+.page-header__menu-list li a {
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -147,12 +151,12 @@
   color: #1d1613;
 }
 
-.page-header__menu-item a:hover {
+.page-header__menu-list li a:hover {
   opacity: 0.75;
   text-decoration: underline;
 }
 
-.page-header__menu-item a:focus {
+.page-header__menu-list li a:focus {
   outline: 1px solid #1d1613;
 }
 
@@ -208,6 +212,10 @@
 }
 
 @media (max-width: 1023px) {
+  .page-header {
+    padding-bottom: 35px;
+  }
+
   .page-header__navigator {
     padding-left: 5.86%;
     padding-right: 5.86%;
@@ -225,6 +233,8 @@
 
   .page-header__main-menu {
     border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .page-header__toggle-menu {
@@ -337,12 +347,12 @@
     padding-left: 0;
   }
 
-  .menu-opened .page-header__menu-item + .page-header__menu-item {
+  .menu-opened .page-header__menu-list li + li {
     margin-top: 21px;
     margin-left: 0;
   }
 
-  .menu-opened .page-header__menu-item a {
+  .menu-opened .page-header__menu-list li a {
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -355,11 +365,11 @@
     padding-bottom: 20px;
   }
 
-  .menu-opened .page-header__submenu-item + .page-header__submenu-item {
+  .menu-opened .page-header__submenu-list li + li {
     margin-top: 20px;
   }
 
-  .menu-opened .page-header__submenu-item a {
+  .menu-opened .page-header__submenu-list li a {
     display: block;
     font-size: 18px;
     font-weight: 500;
@@ -368,12 +378,12 @@
     color: rgba(255, 255, 255, 0.75);
   }
 
-  .page-header__submenu-item a:hover {
+  .page-header__submenu-list li a:hover {
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.5);
   }
 
-  .page-header__submenu-item a:focus {
+  .page-header__submenu-list li a:focus {
     outline: 1px solid #1d1613;
   }
 
@@ -409,6 +419,10 @@
 }
 
 @media (max-width: 767px) {
+  .page-header {
+    padding-bottom: 30px;
+  }
+
   .page-header__navigator {
     padding-left: 4.69%;
     padding-right: 4.69%;

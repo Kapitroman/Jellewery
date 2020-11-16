@@ -19,46 +19,44 @@
   <header class="page-header">
     <nav class="page-header__navigator menu-opened">
       <div class="page-header__wrap-position">
-      <div class="page-header__main-menu">
-        <button class="page-header__toggle-menu">
-          <svg class="page-header__icon-menu" width="25" height="16" focusable="false"><use xlink:href="#icon-menu"></use></svg>
-          <span class="visually-hidden">Переключатель меню</span>
-        </button>
-        <div class="page-header__search">
-          <label for="search">
-            <svg class="page-header__icon-search" width="14" height="14" focusable="false"><use xlink:href="#icon-search"></use></svg>
-            <span class="visually-hidden">Поиск</span>
-          </label>
-          <input id="search" name="search" placeholder="Type here to search">
+        <div class="page-header__main-menu">
+          <button class="page-header__toggle-menu">
+            <svg class="page-header__icon-menu" width="25" height="16" focusable="false"><use xlink:href="#icon-menu"></use></svg>
+            <span class="visually-hidden">Переключатель меню</span>
+          </button>
+          <div class="page-header__search">
+            <label for="search">
+              <svg class="page-header__icon-search" width="14" height="14" focusable="false"><use xlink:href="#icon-search"></use></svg>
+              <span class="visually-hidden">Поиск</span>
+            </label>
+            <input id="search" name="search" placeholder="Type here to search">
+          </div>
+          <a class="page-header__logo">
+            <svg class="page-header__icon-logo" width="66" height="66" focusable="false"><use xlink:href="#icon-logo"></use></svg>
+            <span class="visually-hidden">Логотип</span>
+          </a>
+          <ul class="page-header__user-menu">
+            <li class="page-header__user-item page-header__user-item--login"><a href="#">Login</a></li>
+            <li class="page-header__user-item">
+              <a href="#">
+                <span>Cart</span><span>0</span>
+                <svg class="page-header__icon-cart" width="18" height="16" focusable="false"><use xlink:href="#icon-cart"></use></svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <a class="page-header__logo">
-          <svg class="page-header__icon-logo" width="66" height="66" focusable="false"><use xlink:href="#icon-logo"></use></svg>
-          <span class="visually-hidden">Логотип</span>
-        </a>
-        <ul class="page-header__user-menu">
-          <li class="page-header__user-item page-header__user-item--login"><a href="#">Login</a></li>
-          <li class="page-header__user-item">
-            <a href="#">
-              <span>Cart</span><span>0</span>
-              <svg class="page-header__icon-cart" width="18" height="16" focusable="false"><use xlink:href="#icon-cart"></use></svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
         <ul class="page-header__menu-list">
-          <li class="page-header__menu-item"><a href="#">What’s new</a></li>
-          <li class="page-header__menu-item"><a href="#">Chokers</a></li>
-          <li class="page-header__menu-item"><a href="#">Necklaces</a></li>
-          <li class="page-header__menu-item"><a href="#">Rings</a></li>
-          <li class="page-header__menu-item"><a href="#">Earrings</a></li>
+          <li><a href="#">What’s new</a></li>
+          <li><a href="#">Chokers</a></li>
+          <li><a href="#">Necklaces</a></li>
+          <li><a href="#">Rings</a></li>
+          <li><a href="#">Earrings</a></li>
         </ul>
-
-      <ul class="page-header__submenu-list">
-        <li class="page-header__submenu-item"><a href="#">About CH</a></li>
-        <li class="page-header__submenu-item"><a href="#">Stores & Hours</a></li>
-        <li class="page-header__submenu-item"><a href="#">Contact Us</a></li>
-      </ul>
+        <ul class="page-header__submenu-list">
+          <li><a href="#">About CH</a></li>
+          <li><a href="#">Stores & Hours</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
     </nav>
     <div class="page-header__hero">
@@ -70,10 +68,78 @@
   </header>
   <main>
     <h1 class="visually-hidden"></h1>
-    <p>Necklace with amethyst</p>
+    <section class="new">
+      <h2></h2>
+      <a href="#"></a>
+      <div class="new-slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+    </section>
+
   </main>
   <footer class="page-footer">
-
+    <div class="page-footer__wrap-content">
+      <div class="page-footer__subscribe">
+        <p>The good stuff in your inbox </p>
+        <span>News and updates from CH. No spam, we promise.</span>
+        <form action="#" method="get">
+          <input id="subscribe" name="subscribe" placeholder="Your E-mail" required>
+          <label class="visually-hidden" for="subscribe">subscribe</label>
+          <button type="submit">Sign Up
+            <svg class="page-footer__icon-arrow" width="29" height="9" focusable="false"><use xlink:href="#icon-arrow"></use></svg>
+          </button>
+        </form>
+      </div>
+      <div class="page-footer__wrap-links">
+        <ul class="page-footer__departments-list">
+          <li><a href="#">Ordering & Payment</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+        <ul class="page-footer__about-list">
+          <li><a href="#">About CH</a></li>
+          <li><a href="#">Stores & Hours</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="page-footer__social-list">
+          <li><a href="#">
+            <svg class="page-footer__icon-facebook" width="8" height="15" focusable="false"><use xlink:href="#icon-facebook"></use></svg>
+            <span>Facebook</span></a>
+          </li>
+          <li><a href="#">
+            <svg class="page-footer__icon-instagram" width="15" height="15" focusable="false"><use xlink:href="#icon-instagram"></use></svg>
+            <span>Instagram</span></a>
+          </li>
+          <li><a href="#">
+            <svg class="page-footer__icon-pinterest" width="15" height="15" focusable="false"><use xlink:href="#icon-pinterest"></use></svg>
+            <span>Pinterest</span></a>
+          </li>
+          <li><a href="#">
+            <svg class="page-footer__icon-twitter" width="15" height="13" focusable="false"><use xlink:href="#icon-twitter"></use></svg>
+            <span>Twitter</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
