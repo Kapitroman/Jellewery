@@ -235,3 +235,27 @@
   slidesWrap.addEventListener('mouseup', end, false);
 
 })();
+
+(function () {
+
+  var questionsList = document.querySelector('.faq__list');
+  var questions = questionsList.querySelectorAll('.faq__item p');
+  var questionArrows = questionsList.querySelectorAll('.faq__item svg');
+  for (var i = 0; i < questions.length; i++) {
+    questions[i].classList.add('hiden');
+    questionArrows[i].classList.add('rotated');
+  }
+  questionsList.addEventListener('click', function (evt) {
+    var question = evt.target.closest('.faq__item');
+    if (question) {
+      if (question.querySelector('p').classList.contains('hiden')) {
+        question.querySelector('p').classList.remove('hiden');
+        question.querySelector('svg').classList.remove('rotated');
+      } else {
+        question.querySelector('p').classList.add('hiden');
+        question.querySelector('svg').classList.add('rotated');
+      }
+    }
+  });
+
+})();
