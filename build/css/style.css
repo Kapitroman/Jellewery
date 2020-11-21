@@ -1006,12 +1006,12 @@
   margin-right: auto;
   padding-left: 7.17%;
   padding-right: 7.17%;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-top: 54px;
+  padding-bottom: 50px; }
 
 .blog h2 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 34px;
   font-weight: 700;
@@ -1021,7 +1021,6 @@
 
 .blog a {
   display: block;
-  margin-bottom: 58px;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -1042,7 +1041,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-top: 63px; }
 
 .blog__subwrap {
   width: 48.72%; }
@@ -1133,8 +1133,8 @@
   .blog {
     padding-left: 5.86%;
     padding-right: 5.86%;
-    padding-top: 35px;
-    padding-bottom: 35px; }
+    padding-top: 30px;
+    padding-bottom: 10px; }
   .blog__wrap-article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1144,7 +1144,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    margin-top: 64px; }
   .blog__subwrap {
     width: 100%; }
   .blog__article {
@@ -1186,12 +1187,13 @@
   .blog {
     padding-left: 4.69%;
     padding-right: 4.69%;
-    padding-top: 30px;
+    padding-top: 24px;
     padding-bottom: 30px; }
   .blog__wrap-article {
     max-width: 339px;
     margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-top: 54px; }
   .blog__subwrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1227,21 +1229,25 @@
     width: 120%;
     height: auto; }
   .blog__article--big {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .blog__wrap-text h3 {
+    margin-bottom: 30px; }
+  .blog__wrap-text a {
+    padding-bottom: 10px; } }
 
 .faq {
   max-width: 1366px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
+  padding-top: 43px;
   padding-bottom: 60px;
   padding-left: 14.49%;
   padding-right: 14.49%; }
 
 .faq h2 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 34px;
   font-weight: 700;
@@ -1259,8 +1265,8 @@
 .faq__item {
   position: relative;
   padding-left: 50px;
-  padding-top: 45px;
-  padding-bottom: 45px; }
+  padding-top: 43px;
+  padding-bottom: 44px; }
 
 .faq__item + .faq__item {
   border-top: 1px solid #a87b62; }
@@ -1277,7 +1283,7 @@
   opacity: 0.7;
   text-decoration: underline; }
 
-.faq__item h3:focus {
+.faq__item:focus {
   outline: 1px solid #1d1613; }
 
 .faq__item svg {
@@ -1291,47 +1297,192 @@
           transform: rotate(180deg); }
 
 .faq__item p {
-  width: 530px;
+  width: 525px;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 21px; }
+  line-height: 21px;
+  margin-bottom: -10px; }
 
 .faq__item p.hiden {
   display: none; }
 
 @media (max-width: 1023px) {
   .faq {
-    padding-top: 35px;
+    padding-top: 10px;
     padding-bottom: 40px;
     padding-left: 5.86%;
-    padding-right: 5.86%; } }
+    padding-right: 5.86%; }
+  .faq__item p {
+    width: 527px;
+    margin: 0;
+    margin-top: 28px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px; } }
 
 @media (max-width: 767px) {
   .faq {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     padding-left: 4.69%;
     padding-right: 4.69%; }
   .faq h2 {
-    margin-bottom: 40px; }
+    margin-bottom: 28px; }
   .faq__item {
     padding-left: 25px;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-bottom: 20px; }
   .faq__item h3 {
-    width: 204px;
+    width: 208px;
     font-size: 16px;
     line-height: 22px; }
+  .faq__item h3 span {
+    display: block; }
   .faq__item p {
     width: 204px;
-    margin-top: 25px;
+    margin-top: 14px;
     font-size: 14px;
-    line-height: 20px; }
+    line-height: 20px;
+    margin-bottom: -2px; }
   .faq__item svg {
     top: 25px;
     right: 25px; } }
+
+.chjewellery {
+  max-width: 1366px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 130px;
+  padding-left: 7.16%;
+  padding-right: 7.16%; }
+
+.chjewellery h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #1d1613; }
+
+.chjewellery a {
+  display: block;
+  margin-bottom: 63px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  color: #1d1613; }
+
+.chjewellery__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.chjewellery__wrap img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.chjewellery__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.chjewellery__column div + div {
+  margin-top: auto; }
+
+.chjewellery__column--one {
+  width: 19.65%; }
+
+.chjewellery__column--second {
+  width: 34.18%; }
+
+.chjewellery__column--third {
+  width: 19.82%; }
+
+.chjewellery__column--fourth {
+  width: 18.62%; }
+
+.chjewellery__column--third div + div {
+  margin-right: 14px; }
+
+.chjewellery__column--fourth div + div {
+  margin-left: -14px; }
+
+@media (max-width: 1023px) {
+  .chjewellery {
+    padding-top: 35px;
+    padding-bottom: 80px;
+    padding-left: 5.86%;
+    padding-right: 5.86%; }
+  .chjewellery__column--third div + div {
+    margin-right: 8px; }
+  .chjewellery__column--fourth div + div {
+    margin-left: -8px; } }
+
+@media (max-width: 767px) {
+  .chjewellery {
+    padding-top: 33px;
+    padding-bottom: 70px;
+    padding-left: 4.69%;
+    padding-right: 4.69%; }
+  .chjewellery a {
+    margin-bottom: 50px; }
+  .chjewellery__column--fourth {
+    display: none; }
+  .chjewellery__column--third div + div {
+    margin-right: 0; } }
+
+@media (max-width: 320px) {
+  .chjewellery__column--one {
+    width: 44.83%; }
+  .chjewellery__column--one div + div {
+    margin-top: 15px; }
+  .chjewellery__column--second {
+    width: 50%;
+    overflow: hidden; }
+  .chjewellery__column--second img {
+    min-height: 226px;
+    min-width: 218px;
+    margin-left: -35px; }
+  .chjewellery__column--third {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 9px; }
+  .chjewellery__column--third div {
+    width: 50%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  .chjewellery__column--third div + div {
+    width: 44.83%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 html {
   -webkit-box-sizing: border-box;
