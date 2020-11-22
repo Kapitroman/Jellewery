@@ -14,7 +14,7 @@
   color: #1d1613;
 }
 
-.new a {
+.new h2 + a {
   display: block;
   margin-bottom: 58px;
   font-size: 16px;
@@ -24,11 +24,11 @@
   color: #1d1613;
 }
 
-.new a:hover {
+.new h2 + a:hover {
   color: rgba(0, 0, 0, 0.75);
 }
 
-.new a:focus {
+.new h2 + a:focus {
   outline: 1px solid #1d1613;
 }
 
@@ -52,8 +52,12 @@
 }
 
 .new__swiper-slide {
+  display: block;
   width: 270px;
+  margin: 0;
   margin-left: 30px;
+  padding: 0;
+  text-decoration: none;
   user-select: none;
 }
 

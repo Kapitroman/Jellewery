@@ -168,23 +168,29 @@
     moveSlides();
   }
 
-  function handleGesture() {
+  function handleGesture(event) {
     if (startX - endX >= 60) {
       right();
     }
     if (endX - startX >= 60) {
       left();
     }
+    if (endX === startX) {
+      var linkElement = event.target.closest('.new__swiper-slide');
+      var refLink = linkElement.getAttribute('href');
+      window.location = refLink;
+    }
     return;
   }
 
   function start(event) {
+    event.preventDefault();
     startX = (event.type.search('touch') !== -1) ? event.changedTouches[0].screenX : event.screenX
   }
 
   function end(event) {
     endX = (event.type.search('touch') !== -1) ? event.changedTouches[0].screenX : event.screenX
-    handleGesture();
+    handleGesture(event);
   }
 
   if (window.innerWidth < 768) {
@@ -232,6 +238,7 @@
   slidesWrap.addEventListener('touchstart', start, false);
   slidesWrap.addEventListener('touchend', end, false);
   slidesWrap.addEventListener('mousedown', start, false);
+  slidesWrap.addEventListener('mouseup', end, false);
   slidesWrap.addEventListener('mouseup', end, false);
 
 })();

@@ -28,6 +28,13 @@
 
 @font-face {
   font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Book Italic"), local("CormorantGaramond-BookItalic"), url("../fonts/Cormorantgaramondbookitalic.woff2") format("woff2"), url("../fonts/Cormorantgaramondbookitalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Cormorant Garamond";
   src: local("Cormorant Garamond Semibold"), local("CormorantGaramond-Semibold"), url("../fonts/Cormorantgaramondsemibold.woff2") format("woff2"), url("../fonts/Cormorantgaramondsemibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
@@ -253,11 +260,19 @@
   background-size: cover;
   background-color: #564034; }
 
+.page-header__hero--catalog {
+  min-height: 261px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-desktop@1x.jpg");
+  background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-desktop@1x.jpg"); }
+
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-header__hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/hero-desktop@2x.jpg");
     background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-desktop@2x.jpg");
-    background-size: cover; } }
+    background-size: cover; }
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-desktop@2x.jpg"); } }
 
 .page-header__slogan {
   width: 285px;
@@ -267,6 +282,9 @@
   color: #ffffff;
   text-align: center; }
 
+.page-header__hero--catalog .page-header__slogan {
+  width: 588px; }
+
 .page-header__slogan p {
   margin: 0;
   font-size: 45px;
@@ -274,12 +292,23 @@
   line-height: 50px;
   letter-spacing: 0.03em; }
 
+.page-header__hero--catalog .page-header__slogan p {
+  margin-top: -3px;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0; }
+
 .page-header__slogan span {
   display: block;
   font-size: 38px;
   font-style: italic;
   font-weight: 400;
   line-height: 44px; }
+
+.page-header__hero--catalog .page-header__slogan span {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 29px; }
 
 @media (max-width: 1023px) {
   .page-header {
@@ -405,17 +434,35 @@
     color: #ffffff; }
   .page-header__hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/hero-tablet@1x.jpg");
-    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-tablet@1x.jpg"); } }
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-tablet@1x.jpg"); }
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-desktop@1x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-desktop@1x.jpg"); } }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .page-header__hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/hero-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-tablet@2x.jpg"); } }
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-tablet@2x.jpg"); }
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-desktop@2x.jpg"); } }
 
 @media (max-width: 1023px) {
   .page-header__slogan {
     width: 304px;
-    padding-right: 19px; } }
+    padding-right: 19px; }
+  .page-header__hero--catalog .page-header__slogan {
+    padding-right: 0; } }
+
+@media (max-width: 768px) {
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-tablet@1x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-tablet@1x.jpg"); } }
+
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 768px) and (min-resolution: 144dpi), (max-width: 768px) and (min-resolution: 1.5dppx) {
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-tablet@2x.jpg"); } }
 
 @media (max-width: 767px) {
   .page-header {
@@ -450,17 +497,31 @@
     line-height: 45px; }
   .page-header__slogan span {
     font-size: 34px;
-    line-height: 38px; } }
+    line-height: 38px; }
+  .page-header__hero--catalog .page-header__slogan span {
+    line-height: 26px; } }
 
 @media (max-width: 320px) {
   .page-header__hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/hero-320@1x.jpg");
-    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-320@1x.jpg"); } }
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-320@1x.jpg"); }
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-mobile@1x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-mobile@1x.jpg"); } }
 
 @media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 320px) and (min-resolution: 144dpi), (max-width: 320px) and (min-resolution: 1.5dppx) {
   .page-header__hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/hero-320@2x.jpg");
-    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-320@2x.jpg"); } }
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/hero-320@2x.jpg"); }
+  .page-header__hero--catalog {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(86, 64, 52, 0.7)), to(rgba(86, 64, 52, 0.7))), url("../img/bg-catalog-mobile@2x.jpg");
+    background-image: linear-gradient(rgba(86, 64, 52, 0.7), rgba(86, 64, 52, 0.7)), url("../img/bg-catalog-mobile@2x.jpg"); } }
+
+@media (max-width: 320px) {
+  .page-header__hero--catalog .page-header__slogan span {
+    width: 247px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .page-footer {
   min-height: 338px;
@@ -811,7 +872,7 @@
   text-align: center;
   color: #1d1613; }
 
-.new a {
+.new h2 + a {
   display: block;
   margin-bottom: 58px;
   font-size: 16px;
@@ -820,10 +881,10 @@
   text-align: center;
   color: #1d1613; }
 
-.new a:hover {
+.new h2 + a:hover {
   color: rgba(0, 0, 0, 0.75); }
 
-.new a:focus {
+.new h2 + a:focus {
   outline: 1px solid #1d1613; }
 
 .new__slider {
@@ -849,8 +910,12 @@
   padding-bottom: 47px; }
 
 .new__swiper-slide {
+  display: block;
   width: 270px;
+  margin: 0;
   margin-left: 30px;
+  padding: 0;
+  text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1483,6 +1548,9 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; } }
+
+.catalog {
+  padding-top: 20px; }
 
 html {
   -webkit-box-sizing: border-box;
