@@ -47,6 +47,11 @@
 (function () {
 
   var slider = document.querySelector('.new__slider');
+
+  if (!slider) {
+    return;
+  }
+
   var slidesWrap = slider.querySelector('.new__swiper-wrapper');
   var slides = slider.querySelectorAll('.new__swiper-slide');
   var panagination = slider.querySelector('.new__swiper-pagination');
@@ -246,6 +251,11 @@
 (function () {
 
   var questionsList = document.querySelector('.faq__list');
+
+  if (!questionsList) {
+    return;
+  }
+
   var questions = questionsList.querySelectorAll('.faq__item p');
   var questionArrows = questionsList.querySelectorAll('.faq__item svg');
   for (var i = 0; i < questions.length; i++) {
@@ -266,3 +276,71 @@
   });
 
 })();
+
+(function () {
+
+  var filterButton = document.querySelector('.catalog__filter-button');
+  if (!filterButton) {
+    return;
+  }
+
+  var filter = document.querySelector('.filter');
+  var body = document.querySelector('body');
+  var closeButton = filter.querySelector('.filter__close-form');
+
+  function clickfilterButtonHandler(evt) {
+    evt.preventDefault();
+    filter.classList.add('filter--modal');
+    body.classList.add('body-lock');
+  }
+
+  function closeModal() {
+    if (filter.classList.contains('filter--modal')) {
+      filter.classList.remove('filter--modal');
+    }
+    body.classList.remove('body-lock');
+  }
+
+  filterButton.addEventListener('click', clickfilterButtonHandler);
+  closeButton.addEventListener('click', closeModal);
+
+
+})();
+
+(function () {
+
+  var filter = document.querySelector('.filter');
+
+  if (!filter) {
+    return;
+  }
+
+  var filterSections = filter.querySelectorAll('.filter__section');
+  var filterGroups = filter.querySelectorAll('.filter__group');
+  var filterArrows = filter.querySelectorAll('.filter__section svg');
+
+  function clickSubHeaderHandler(evt) {
+    var subHead = evt.target.closest('.filter__section h3');
+    if (subHead) {
+      if (this.querySelector('.filter__group').classList.contains('hidden')) {
+        this.querySelector('.filter__group').classList.remove('hidden');
+        this.querySelector('.filter__section svg').classList.remove('rotated');
+      } else {
+        this.querySelector('.filter__group').classList.add('hidden');
+        this.querySelector('.filter__section svg').classList.add('rotated');
+      }
+    } else {
+      return;
+    }
+  }
+
+  for (var i = 0; i < filterGroups.length; i++) {
+    filterGroups[i].classList.add('hidden');
+    filterArrows[i].classList.add('rotated');
+  }
+
+  for (var j = 0; j < filterSections.length; j++) {
+    filterSections[j].addEventListener('click', clickSubHeaderHandler);
+  }
+
+}) ();

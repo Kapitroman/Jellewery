@@ -1,0 +1,403 @@
+.filter form {
+  position: relative;
+}
+
+.filter__section {
+  padding-top: 23px;
+  padding-bottom: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 1px solid #a87b62;
+  border-left: 1px solid #a87b62;
+  border-right: 1px solid #a87b62;
+}
+
+.filter__section--range {
+  padding-top: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #a87b62;
+}
+/*
+.filter__section:last-child {
+  border-bottom: 1px solid #a87b62;
+}*/
+
+.filter__section h3 {
+  position: relative;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #1d1613;
+}
+
+.filter__section h3 + .filter__group {
+  margin-top: 22px;
+}
+
+.filter__section h3 + .filter__group--range {
+  margin-top: 16px;
+}
+
+.filter__section svg {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  fill: none;
+}
+
+.filter__section svg.rotated {
+  transform: rotate(180deg);
+}
+
+.filter__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__group.hidden {
+  display: none;
+}
+
+.filter__group label {
+  margin-bottom: 13px;
+  padding-left: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #1d1613;
+}
+
+.filter__group label:last-child {
+  margin-bottom: 0;
+}
+
+.filter input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.filter input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #a87b62;
+  background-color: #ffffff;
+}
+
+.filter input[type="checkbox"]:checked + label::before {
+  background-color: #a87b62;
+}
+
+.filter input[type="checkbox"]:focus + label {
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.filter__group--range {
+  display: block;
+}
+
+.filter__range-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__range-controls {
+  position: relative;
+  width: 100%;
+  height: 15px;
+}
+
+.filter__scale {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 100%;
+  height: 1px;
+  background-color: #f0eae4;
+}
+
+.filter__bar {
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  left: 30%;
+  background-color: #a87b62;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #a87b62;
+}
+
+.filter__range-toggle--min {
+  left: 23%;
+}
+
+.filter__range-toggle--max {
+  right: 18%;
+}
+
+.filter__prices {
+  display: flex;
+  width: 100%;
+  padding-top: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #1d1613;
+}
+
+.filter__price-min {
+  margin-left: 20%;
+}
+
+.filter__price-max {
+  margin-right: 14%;
+  margin-left: auto;
+}
+
+.filter__group-buttons {
+  padding-top: 35px;
+}
+
+.filter__group-buttons button {
+  display: block;
+  width: 100%;
+  min-height: 68px;
+  font-family: "Poppins", "Verdana", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+
+.filter__buttom-submit {
+  color: #ffffff;
+  border: none;
+  background-color: #a87b62;
+}
+
+.filter__buttom-reset {
+  margin-top: 2px;
+  position: relative;
+  color: #1d1613;
+  border: none;
+  background-color: transparent;
+}
+
+.filter__buttom-reset::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 67px;
+  height: 1px;
+  background-color: #a87b62;
+  transform: translateX(-50%);
+}
+
+.filter__close-form {
+  display: none;
+  position: absolute;
+  right: -16px;
+  top: -16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+}
+
+.filter__close-form svg {
+  position: absolute;
+}
+
+.filter__icon-ellipse {
+  top: 0;
+  left: 0;
+}
+
+.filter__icon-close {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1023px) {
+  .filter--modal {
+    display: block;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+  }
+
+  .filter form {
+    position: absolute;
+    top: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 442px;
+    width: 100%;
+    padding-bottom: 40px;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  .filter__close-form {
+    display: block;
+  }
+
+  .filter__section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 9%;
+    padding-right: 9%;
+    border-bottom: 1px solid #a87b62;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .filter__section h3 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .filter__section h3 + .filter__group--range {
+    margin-top: 24px;
+  }
+
+  .filter input[type="checkbox"] + label::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter__group label {
+    margin-bottom: 17px;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .filter__range-controls {
+    height: 18px;
+  }
+
+  .filter__scale {
+    top: 8px;
+  }
+
+  .filter__bar {
+    width: 52%;
+    left: 17%;
+  }
+
+  .filter__range-toggle {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter__range-toggle--min {
+    left: 15.5%;
+  }
+
+  .filter__range-toggle--max {
+    right: 30.5%;
+  }
+
+  .filter__prices {
+    padding-top: 6px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .filter__price-min {
+    margin-left: 13%;
+  }
+
+  .filter__price-max {
+    margin-right: 28%;
+  }
+
+  .filter__group-buttons {
+    padding-top: 40px;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+
+  .filter__buttom-reset {
+    margin-top: 25px;
+    border: 1px solid #a87b62;
+    background-color: #ffffff;
+  }
+
+  .filter__buttom-reset::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .filter form {
+    position: absolute;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 270px;
+    padding-bottom: 30px;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  .filter__section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 7.41%;
+    padding-right: 7.41%;
+  }
+
+  .filter__bar {
+    width: 56%;
+    left: 17%;
+  }
+
+  .filter__range-toggle--min {
+    left: 14%;
+  }
+
+  .filter__range-toggle--max {
+    right: 17%;
+  }
+
+  .filter__price-min {
+    margin-left: 7%;
+  }
+
+  .filter__price-max {
+    margin-right: 15%;
+  }
+
+  .filter__group-buttons {
+    padding-top: 30px;
+    padding-left: 7.41%;
+    padding-right: 7.41%;
+  }
+
+  .filter__buttom-reset {
+    margin-top: 20px;
+  }
+
+  .filter__close-form {
+    right: -10px;
+  }
+}
