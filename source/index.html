@@ -22,21 +22,21 @@
         <div class="page-header__main-menu">
           <button class="page-header__toggle-menu">
             <svg class="page-header__icon-menu" width="25" height="16" focusable="false"><use xlink:href="#icon-menu"></use></svg>
-            <span class="visually-hidden">Переключатель меню</span>
+            <span class="visually-hidden">toggle menu</span>
           </button>
           <div class="page-header__search">
             <label for="search">
               <svg class="page-header__icon-search" width="14" height="14" focusable="false"><use xlink:href="#icon-search"></use></svg>
-              <span class="visually-hidden">Поиск</span>
+              <span class="visually-hidden">search</span>
             </label>
             <input id="search" name="search" placeholder="Type here to search">
           </div>
           <a class="page-header__logo">
             <svg class="page-header__icon-logo" width="66" height="66" focusable="false"><use xlink:href="#icon-logo"></use></svg>
-            <span class="visually-hidden">Логотип</span>
+            <span class="visually-hidden">logo</span>
           </a>
           <ul class="page-header__user-menu">
-            <li class="page-header__user-item page-header__user-item--login"><a href="#">Login</a></li>
+            <li class="page-header__user-item page-header__user-item--login"><a href="login.html" target="_blank">Login</a></li>
             <li class="page-header__user-item">
               <a href="#">
                 <span>Cart</span><span>0</span>
@@ -288,7 +288,25 @@
         </div>
       </div>
     </section>
-
+    <section class="login">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <h2>Log In</h2>
+        <input type="email" placeholder="Your E-mail" name="email" id="mail" required>
+        <label class="visually-hidden" for="mail">e-mail</label>
+        <input type="password" placeholder="Password" name="pass" required>
+        <label class="visually-hidden" for="pass">password</label>
+        <a href="">Forgot your password?</a>
+        <button type="submit">Log In</button>
+        <div class="login__singup">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+        <button class="login__close-button">
+          <svg class="login__icon-loginclose" width="14" height="14" focusable="false"><use xlink:href="#icon-loginclose"></use></svg>
+          <span class="visually-hidden">Close form</span>
+        </button>
+      </form>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrap-content">

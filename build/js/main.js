@@ -279,6 +279,82 @@
 
 (function () {
 
+  var loginLink = document.querySelector('.page-header__user-item--login a');
+
+  if (!loginLink) {
+    return;
+  }
+
+  var body = document.querySelector('body');
+  var sectionLogin = document.querySelector('.login');
+  var loginForm = sectionLogin.querySelector('.login form');
+  var inputEmail = sectionLogin.querySelector('.login [type="email"]');
+
+  var isStorageSupport = true;
+  var storageEmail = "";
+
+  function clickLoginLinkHandler(evt) {
+    evt.preventDefault();
+    sectionLogin.classList.add('modal-show');
+    body.classList.add('body-lock');
+    if (storageEmail) {
+      inputEmail.value = localStorage.getItem('email');
+    }
+    inputEmail.focus();
+  }
+
+  function closeModal() {
+    if (sectionLogin.classList.contains('modal-show')) {
+      sectionLogin.classList.remove('modal-show');
+    }
+    if (sectionLogin.classList.contains('modal-show')) {
+      sectionLogin.classList.remove('modal-show');
+    }
+    body.classList.remove('body-lock');
+  }
+
+  function clickModalCloseHandler(evt) {
+    if (!evt.target.closest('form')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    if (evt.target.closest('.login__close-button')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    return;
+  }
+
+  function pressEscHandler(evt) {
+    if (evt.key === 'Escape' || evt.keyCode === 27) {
+      evt.preventDefault();
+      if (sectionLogin.classList.contains('modal-show')) {
+        closeModal();
+      }
+    }
+  }
+
+  function submitFormHandler() {
+    if (isStorageSupport) {
+      localStorage.setItem('email', inputEmail.value);
+    }
+  }
+
+  try {
+    storageEmail = localStorage.getItem('email');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  loginLink.addEventListener('click', clickLoginLinkHandler);
+  sectionLogin.addEventListener('click', clickModalCloseHandler);
+  window.addEventListener('keydown', pressEscHandler);
+  loginForm.addEventListener('submit', submitFormHandler);
+
+})();
+
+(function () {
+
   var filterButton = document.querySelector('.catalog__filter-button');
   if (!filterButton) {
     return;
