@@ -304,7 +304,6 @@
   filterButton.addEventListener('click', clickfilterButtonHandler);
   closeButton.addEventListener('click', closeModal);
 
-
 })();
 
 (function () {

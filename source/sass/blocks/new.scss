@@ -3,6 +3,10 @@
   padding-bottom: 55px;
 }
 
+.new--card {
+  padding-bottom: 118px;
+}
+
 .new h2 {
   margin: 0;
   margin-bottom: 25px;
@@ -14,6 +18,10 @@
   color: #1d1613;
 }
 
+.new--card h2 {
+  margin-bottom: 20px;
+}
+
 .new h2 + a {
   display: block;
   margin-bottom: 58px;
@@ -22,6 +30,10 @@
   line-height: 21px;
   text-align: center;
   color: #1d1613;
+}
+
+.new--card h2 + a {
+  margin-bottom: 63px;
 }
 
 .new h2 + a:hover {
@@ -164,11 +176,15 @@
     padding-bottom: 30px;
   }
 
+  .new--card {
+    padding-bottom: 70px;
+  }
+
   .new h2 {
     margin-bottom: 20px;
   }
 
-  .new a {
+  .new h2 + a {
     display: block;
     margin-bottom: 54px;
   }
@@ -200,7 +216,11 @@
     padding-bottom: 25px;
   }
 
-  .new a {
+  .new--card {
+    padding-bottom: 58px;
+  }
+
+  .new h2 + a {
     display: block;
     margin-bottom: 45px;
   }
