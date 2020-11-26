@@ -880,12 +880,28 @@
 
 .new h2 + a {
   display: block;
+  position: relative;
   margin-bottom: 58px;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
-  color: #1d1613; }
+  color: #1d1613;
+  text-decoration: none; }
+
+.new h2 + a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 80px;
+  height: 1px;
+  background-color: #a87b62;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.new--card h2 + a::after {
+  bottom: -2px; }
 
 .new--card h2 + a {
   margin-bottom: 63px; }
@@ -1097,13 +1113,26 @@
   text-align: center;
   color: #1d1613; }
 
-.blog a {
+.blog h2 + a {
   display: block;
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
-  color: #1d1613; }
+  color: #1d1613;
+  text-decoration: none; }
+
+.blog h2 + a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 64px;
+  height: 1px;
+  background-color: #a87b62;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .blog a:hover {
   color: rgba(0, 0, 0, 0.75); }
@@ -1186,6 +1215,7 @@
   color: #000000; }
 
 .blog__wrap-text a {
+  position: relative;
   display: block;
   margin: 0;
   padding-top: 6px;
@@ -1193,7 +1223,19 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
-  color: #1d1613; }
+  color: #1d1613;
+  text-decoration: none; }
+
+.blog__wrap-text a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 97px;
+  height: 1px;
+  background-color: #a87b62;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .blog__article--big {
   position: relative; }
@@ -1452,12 +1494,25 @@
 
 .chjewellery a {
   display: block;
+  position: relative;
   margin-bottom: 63px;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
-  color: #1d1613; }
+  color: #1d1613;
+  text-decoration: none; }
+
+.chjewellery a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 74px;
+  height: 1px;
+  background-color: #a87b62;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .chjewellery__wrap {
   display: -webkit-box;
@@ -1759,6 +1814,13 @@
     padding-left: 12px;
     padding-right: 12px; } }
 
+.filter--page {
+  width: 458px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
 .filter form {
   position: relative; }
 
@@ -1776,10 +1838,6 @@
   padding-bottom: 18px;
   border-bottom: 1px solid #a87b62; }
 
-/*
-.filter__section:last-child {
-  border-bottom: 1px solid #a87b62;
-}*/
 .filter__section h3 {
   position: relative;
   margin: 0;
@@ -1970,6 +2028,28 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+.filter__section h3:hover,
+.filter__group label:hover,
+.filter button:hover,
+.filter__range-toggle:hover {
+  cursor: pointer; }
+
+.filter__section h3:hover,
+.filter__group label:hover {
+  background-color: #fdefe8; }
+
+.filter button:hover {
+  opacity: 0.75; }
+
+.filter__range-toggle:hover {
+  background-color: #9b3b12; }
+
+.filter__section h3:focus,
+.filter__group label:focus,
+.filter button:focus,
+.filter__range-toggle:focus {
+  outline: 1px solid #1d1613; }
 
 @media (max-width: 1023px) {
   .filter--modal {

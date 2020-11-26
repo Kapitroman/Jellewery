@@ -24,12 +24,29 @@
 
 .new h2 + a {
   display: block;
+  position: relative;
   margin-bottom: 58px;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
   color: #1d1613;
+  text-decoration: none;
+}
+
+.new h2 + a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  width: 80px;
+  height: 1px;
+  background-color: #a87b62;
+  transform: translateX(-50%);
+}
+
+.new--card h2 + a::after {
+  bottom: -2px;
 }
 
 .new--card h2 + a {

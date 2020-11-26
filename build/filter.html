@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="filter for choose features">
+  <title>Jewellery. Filter.</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Poppinspoppins-semiboldmedium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Cormorantgaramonditalic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Cormorantgaramondbold.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Filter</h1>
+    <section class="filter filter--page">
+      <form action="#">
+        <div class="filter__section">
+          <h3 tabindex="0">Product
+            <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
+          </h3>
+          <div class="filter__group">
+            <input type="checkbox" class="visually-hidden" name="necklaces" id="necklaces" checked="">
+            <label for="necklaces">Necklaces</label>
+            <input type="checkbox" class="visually-hidden" name="chokers" id="chokers" checked="">
+            <label for="chokers">Chokers</label>
+            <input type="checkbox" class="visually-hidden" name="rings" id="rings">
+            <label for="rings">Rings</label>
+            <input type="checkbox" class="visually-hidden" name="earrings" id="earrings" checked="">
+            <label for="earrings">Earrings</label>
+          </div>
+        </div>
+        <div class="filter__section">
+          <h3 tabindex="0">Material
+            <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
+          </h3>
+          <div class="filter__group">
+            <input type="checkbox" class="visually-hidden" name="gold" id="gold">
+            <label for="gold">Gold</label>
+            <input type="checkbox" class="visually-hidden" name="silver" id="silver">
+            <label for="silver">Silver</label>
+          </div>
+        </div>
+        <div class="filter__section">
+          <h3 tabindex="0">Collection
+            <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
+          </h3>
+          <div class="filter__group">
+            <input type="checkbox" class="visually-hidden" name="pink-flamingo" id="pink-flamingo">
+            <label for="pink-flamingo">Pink flamingo</label>
+            <input type="checkbox" class="visually-hidden" name="dreams" id="dreams">
+            <label for="dreams">Dreams</label>
+          </div>
+        </div>
+        <div class="filter__section filter__section--range">
+          <h3 tabindex="0">Price
+            <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
+          </h3>
+          <div class=" filter__group filter__group--range">
+            <div class="filter__range-container">
+              <div class="filter__range-controls">
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
+                </div>
+                <div class="filter__range-toggle filter__range-toggle--min" tabindex="0"></div>
+                <div class="filter__range-toggle filter__range-toggle--max" tabindex="0"></div>
+              </div>
+              <div class="filter__prices">
+                <div class="filter__price-min">$ 55</div>
+                <div class="filter__price-max">$ 155</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter__group-buttons">
+          <button type="submit" class="filter__buttom-submit">Apply</button>
+          <button type="reset" class="filter__buttom-reset">Clear All</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

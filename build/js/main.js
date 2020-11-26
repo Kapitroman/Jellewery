@@ -403,19 +403,6 @@
 
 })();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 (function () {
 
   var filterButton = document.querySelector('.catalog__filter-button');
@@ -425,7 +412,7 @@
 
   var filter = document.querySelector('.filter');
   var body = document.querySelector('body');
-  var closeButton = filter.querySelector('.filter__close-form');
+  var filterScript;
 
   function clickfilterButtonHandler(evt) {
     evt.preventDefault();
@@ -440,8 +427,55 @@
     body.classList.remove('body-lock');
   }
 
-  filterButton.addEventListener('click', clickfilterButtonHandler);
-  closeButton.addEventListener('click', closeModal);
+  function clickModalCloseHandler(evt) {
+    if (!evt.target.closest('form')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    if (evt.target.closest('.filter__close-form')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    return;
+  }
+
+  function pressEscHandler(evt) {
+    if (evt.key === 'Escape' || evt.keyCode === 27) {
+      evt.preventDefault();
+      if (filter.classList.contains('filter--modal')) {
+        closeModal();
+      }
+    }
+  }
+
+  if (window.innerWidth < 1024) {
+    filterScript = true;
+    filterButton.addEventListener('click', clickfilterButtonHandler);
+    filter.addEventListener('click', clickModalCloseHandler);
+    window.addEventListener('keydown', pressEscHandler);
+  }
+
+  window.addEventListener('resize', function () {
+    if(window.innerWidth < 1024 && filterScript) {
+      return;
+    }
+    if (window.innerWidth < 1024 && !filterScript) {
+      filterScript = true;
+      filterButton.addEventListener('click', clickfilterButtonHandler);
+      filter.addEventListener('click', clickModalCloseHandler);
+      window.addEventListener('keydown', pressEscHandler);
+    }
+    if (window.innerWidth >= 1024 && !filterScript) {
+      return;
+    }
+    if (window.innerWidth >= 1024 && filterScript) {
+      filterScript = false;
+      closeModal();
+      filterButton.removeEventListener('click', clickfilterButtonHandler);
+      filter.removeEventListener('click', clickModalCloseHandler);
+      window.removeEventListener('keydown', pressEscHandler);
+    }
+  }, false);
 
 })();
 

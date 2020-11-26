@@ -73,7 +73,7 @@
       <div class="catalog__filter filter">
         <form action="#">
           <div class="filter__section">
-            <h3>Product
+            <h3 tabindex="0">Product
               <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
             </h3>
             <div class="filter__group">
@@ -88,7 +88,7 @@
             </div>
           </div>
           <div class="filter__section">
-            <h3>Material
+            <h3 tabindex="0">Material
               <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
             </h3>
             <div class="filter__group">
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="filter__section">
-            <h3>Collection
+            <h3 tabindex="0">Collection
               <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
             </h3>
             <div class="filter__group">
@@ -110,7 +110,7 @@
             </div>
           </div>
           <div class="filter__section filter__section--range">
-            <h3>Price
+            <h3 tabindex="0">Price
               <svg class="new__icon-faq" width="17" height="10" focusable="false"><use xlink:href="#icon-faq"></use></svg>
             </h3>
             <div class=" filter__group filter__group--range">
@@ -141,12 +141,12 @@
         </form>
       </div>
       <div class="catalog__gallery">
-        <a href="filter.html" class="catalog__filter-button">
+        <a href="filter.html" target="_blank" class="catalog__filter-button">
           Filter
         </a>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a href="#" class="catalog__link">
+            <a href="card.html" class="catalog__link">
               <picture>
                 <source type="image/webp" srcset="img/double-pearl-earrings@1x.webp 1x, img/double-pearl-earrings@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
@@ -310,7 +310,7 @@
         <h2>Log In</h2>
         <input type="email" placeholder="Your E-mail" name="email" id="mail" required>
         <label class="visually-hidden" for="mail">e-mail</label>
-        <input type="password" placeholder="Password" name="pass" required>
+        <input type="password" placeholder="Password" name="pass" id="pass" required>
         <label class="visually-hidden" for="pass">password</label>
         <a href="">Forgot your password?</a>
         <button type="submit">Log In</button>

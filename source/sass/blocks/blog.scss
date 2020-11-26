@@ -20,13 +20,26 @@
   color: #1d1613;
 }
 
-.blog a {
+.blog h2 + a {
   display: block;
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
   color: #1d1613;
+  text-decoration: none;
+}
+
+.blog h2 + a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 64px;
+  height: 1px;
+  background-color: #a87b62;
+  transform: translateX(-50%);
 }
 
 .blog a:hover {
@@ -102,6 +115,7 @@
 }
 
 .blog__wrap-text a {
+  position: relative;
   display: block;
   margin: 0;
   padding-top: 6px;
@@ -110,6 +124,18 @@
   font-weight: 500;
   line-height: 21px;
   color: #1d1613;
+  text-decoration: none;
+}
+
+.blog__wrap-text a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 97px;
+  height: 1px;
+  background-color: #a87b62;
+  transform: translateX(-50%);
 }
 
 .blog__article--big {

@@ -23,12 +23,25 @@
 
 .chjewellery a {
   display: block;
+  position: relative;
   margin-bottom: 63px;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   text-align: center;
   color: #1d1613;
+  text-decoration: none;
+}
+
+.chjewellery a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 74px;
+  height: 1px;
+  background-color: #a87b62;
+  transform: translateX(-50%);
 }
 
 .chjewellery__wrap {
