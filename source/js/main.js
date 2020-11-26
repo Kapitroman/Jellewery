@@ -307,9 +307,6 @@
     if (sectionLogin.classList.contains('modal-show')) {
       sectionLogin.classList.remove('modal-show');
     }
-    if (sectionLogin.classList.contains('modal-show')) {
-      sectionLogin.classList.remove('modal-show');
-    }
     body.classList.remove('body-lock');
   }
 
@@ -352,6 +349,72 @@
   loginForm.addEventListener('submit', submitFormHandler);
 
 })();
+
+
+
+(function () {
+
+  var addCardLink = document.querySelector('.card__button');
+
+  if (!addCardLink) {
+    return;
+  }
+
+  var body = document.querySelector('body');
+  var sectionAddCard = document.querySelector('.added-cart');
+
+  function clickLoginLinkHandler(evt) {
+    evt.preventDefault();
+    sectionAddCard.classList.add('modal-show');
+    body.classList.add('body-lock');
+  }
+
+  function closeModal() {
+    if (sectionAddCard.classList.contains('modal-show')) {
+      sectionAddCard.classList.remove('modal-show');
+    }
+    body.classList.remove('body-lock');
+  }
+
+  function clickModalCloseHandler(evt) {
+    if (!evt.target.closest('form')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    if (evt.target.closest('.added-cart__close-button')) {
+      evt.preventDefault();
+      return closeModal();
+    }
+    return;
+  }
+
+  function pressEscHandler(evt) {
+    if (evt.key === 'Escape' || evt.keyCode === 27) {
+      evt.preventDefault();
+      if (sectionAddCard.classList.contains('modal-show')) {
+        closeModal();
+      }
+    }
+  }
+
+  addCardLink.addEventListener('click', clickLoginLinkHandler);
+  sectionAddCard.addEventListener('click', clickModalCloseHandler);
+  window.addEventListener('keydown', pressEscHandler);
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (function () {
 

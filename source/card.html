@@ -117,7 +117,7 @@
             <td>18” / 20”</td>
           </tr>
         </table>
-        <a href="#" class="card__button">Add to cart</a>
+        <a href="add-card.html" class="card__button">Add to cart</a>
         <ul class="card__features">
           <li>14 Day Returns</li>
           <li>2-Year Warranty</li>
@@ -269,6 +269,42 @@
           <span class="visually-hidden">next slides</span>
         </button>
       </div>
+    </section>
+    <section class="added-cart">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <h2>The item was added to your cart</h2>
+        <div class="added-cart__wrap-decription">
+          <div class="added-cart__image">
+            <picture>
+              <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+              <img src="img/necklace-detail@1x.jpg" width="84" height="79" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail" loading="lazy">
+            </picture>
+          </div>
+          <div class="added-cart__description">
+            <p>Gold Necklace </p>
+            <span>$ 115</span>
+          </div>
+          <div class="added-cart__count">
+            <svg class="added-cart__increment" width="14" height="14" focusable="false"><use xlink:href="#icon-increment"></use></svg>
+            <output name="count">1</output>
+            <svg class="added-cart__decrement" width="14" height="2" focusable="false"><use xlink:href="#icon-decrement"></use></svg>
+          </div>
+        </div>
+        <div class="added-cart__status">
+          <span>You have 1 item in the cart</span>
+          <p>Cart subtotal: $<output name="result">115</output></p>
+          <input type="hidden" name="total" value="115">
+        </div>
+        <div class="added-cart__buttons">
+          <a href="#">Continue shopping</a>
+          <button type="submit">Checkout</button>
+        </div>
+        <button class="added-cart__close-button">
+          <svg class="added-cart__icon-loginclose" width="14" height="14" focusable="false"><use xlink:href="#icon-loginclose"></use></svg>
+          <span class="visually-hidden">Close form</span>
+        </button>
+      </form>
     </section>
   </main>
   <footer class="page-footer">
