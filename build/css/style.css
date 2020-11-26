@@ -931,6 +931,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 3600px;
   margin-left: -30px;
   padding-bottom: 47px; }
 
