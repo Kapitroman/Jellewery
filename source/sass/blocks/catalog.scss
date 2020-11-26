@@ -163,6 +163,12 @@
     background-color: #a87b62;
   }
 
+  .catalog__filter-button::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+
   .catalog__item {
     width: 30.38%;
     margin-right: 4.42%;

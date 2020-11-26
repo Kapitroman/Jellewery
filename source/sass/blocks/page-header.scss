@@ -138,6 +138,12 @@
   padding-left: 11px;
 }
 
+.page-header__menu-list::after {
+  content: '';
+  min-height: inherit;
+  font-size: 0;
+}
+
 .page-header__menu-list li + li {
   margin-left: 35px;
 }
@@ -176,6 +182,12 @@
   background-position: 50% 0;
   background-size: cover;
   background-color: #564034;
+}
+
+.page-header__hero::after {
+  content: '';
+  min-height: inherit;
+  font-size: 0;
 }
 
 .page-header__hero--catalog {

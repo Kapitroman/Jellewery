@@ -76,7 +76,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  width: 3600px;
+  width: 3570px;
   margin-left: -30px;
   padding-bottom: 47px;
 }
@@ -250,6 +250,10 @@
 
   .new__swiper-wrapper {
     padding-bottom: 27px;
+  }
+
+  .new__swiper-slide {
+    width: 130px;
   }
 
   .new__swiper-slide img {
