@@ -43,14 +43,20 @@
   margin-top: 16px;
 }
 
-.filter__section svg {
+.filter__wrap-svg {
   position: absolute;
   right: 0;
   top: 5px;
+  width: 17px;
+  height: 10px;
+  line-height: 10px;
+}
+
+.filter__section svg {
   fill: none;
 }
 
-.filter__section svg.rotated {
+.filter__wrap-svg.rotated {
   transform: rotate(180deg);
 }
 

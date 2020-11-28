@@ -57,14 +57,24 @@
   outline: 1px solid #1d1613;
 }
 
-.faq__item svg {
+.faq__wrap-svg {
+  display: block;
+  width: 17px;
+  height: 10px;
+  line-height: 10px;
   position: absolute;
   top: 52px;
   right: 50px;
+}
+
+
+.faq__wrap-svg svg {
+  width: 17px;
+  height: 10px;
   fill: none;
 }
 
-.faq__item svg.rotated {
+.faq__wrap-svg.rotated {
   transform: rotate(180deg);
 }
 
@@ -137,7 +147,7 @@
     margin-bottom: -2px;
   }
 
-  .faq__item svg {
+  .faq__wrap-svg {
     top: 25px;
     right: 25px;
   }

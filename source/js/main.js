@@ -257,7 +257,7 @@
   }
 
   var questions = questionsList.querySelectorAll('.faq__item p');
-  var questionArrows = questionsList.querySelectorAll('.faq__item svg');
+  var questionArrows = questionsList.querySelectorAll('.faq__wrap-svg');
   for (var i = 0; i < questions.length; i++) {
     questions[i].classList.add('hiden');
     questionArrows[i].classList.add('rotated');
@@ -267,10 +267,10 @@
     if (question) {
       if (question.querySelector('p').classList.contains('hiden')) {
         question.querySelector('p').classList.remove('hiden');
-        question.querySelector('svg').classList.remove('rotated');
+        question.querySelector('.faq__wrap-svg').classList.remove('rotated');
       } else {
         question.querySelector('p').classList.add('hiden');
-        question.querySelector('svg').classList.add('rotated');
+        question.querySelector('.faq__wrap-svg').classList.add('rotated');
       }
     }
   });
@@ -489,17 +489,17 @@
 
   var filterSections = filter.querySelectorAll('.filter__section');
   var filterGroups = filter.querySelectorAll('.filter__group');
-  var filterArrows = filter.querySelectorAll('.filter__section svg');
+  var filterArrows = filter.querySelectorAll('.filter__wrap-svg');
 
   function clickSubHeaderHandler(evt) {
     var subHead = evt.target.closest('.filter__section h3');
     if (subHead) {
       if (this.querySelector('.filter__group').classList.contains('hidden')) {
         this.querySelector('.filter__group').classList.remove('hidden');
-        this.querySelector('.filter__section svg').classList.remove('rotated');
+        this.querySelector('.filter__wrap-svg').classList.remove('rotated');
       } else {
         this.querySelector('.filter__group').classList.add('hidden');
-        this.querySelector('.filter__section svg').classList.add('rotated');
+        this.querySelector('.filter__wrap-svg').classList.add('rotated');
       }
     } else {
       return;
@@ -509,10 +509,7 @@
   for (var i = 0; i < filterGroups.length; i++) {
     filterGroups[i].classList.add('hidden');
     filterArrows[i].classList.add('rotated');
-  }
-
-  for (var j = 0; j < filterSections.length; j++) {
-    filterSections[j].addEventListener('click', clickSubHeaderHandler);
+    filterSections[i].addEventListener('click', clickSubHeaderHandler);
   }
 
 }) ();
