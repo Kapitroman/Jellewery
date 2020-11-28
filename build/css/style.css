@@ -222,7 +222,7 @@
   padding-left: 11px; }
 
 .page-header__menu-list::after {
-  content: '';
+  content: "";
   min-height: inherit;
   font-size: 0; }
 
@@ -266,7 +266,7 @@
   background-color: #564034; }
 
 .page-header__hero::after {
-  content: '';
+  content: "";
   min-height: inherit;
   font-size: 0; }
 
@@ -1265,7 +1265,7 @@
   min-height: 315px; }
 
 .blog__wrap-text--big::after {
-  content: '';
+  content: "";
   min-height: inherit;
   font-size: 0; }
 
@@ -1799,7 +1799,7 @@
     text-decoration: none;
     background-color: #a87b62; }
   .catalog__filter-button::after {
-    content: '';
+    content: "";
     min-height: inherit;
     font-size: 0; }
   .catalog__list {
