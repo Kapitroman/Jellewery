@@ -270,9 +270,15 @@
   }
 
   .page-header__main-menu {
+    justify-content: flex-start;
     border-bottom: none;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .page-header__logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .page-header__toggle-menu {
