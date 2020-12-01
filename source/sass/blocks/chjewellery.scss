@@ -21,9 +21,12 @@
   color: #1d1613;
 }
 
-.chjewellery a {
+.chjewellery h2 + a {
   display: block;
   position: relative;
+  width: 74px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 63px;
   font-size: 16px;
   font-weight: 500;
@@ -33,7 +36,7 @@
   text-decoration: none;
 }
 
-.chjewellery a::after {
+.chjewellery h2 + a::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -42,6 +45,14 @@
   height: 1px;
   background-color: #a87b62;
   transform: translateX(-50%);
+}
+
+.chjewellery h2 + a:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.chjewellery h2 + a:focus {
+  outline: 1px solid #1d1613;
 }
 
 .chjewellery__wrap {

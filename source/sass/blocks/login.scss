@@ -49,6 +49,7 @@
 .login input {
   display: block;
   width: 100%;
+  //min-height: 39px;
   padding-top: 9px;
   padding-bottom: 9px;
   font-family: "Poppins", "Verdana", sans-serif;
@@ -66,6 +67,7 @@
 }
 
 .login input::placeholder {
+  //min-height: 100%;
   padding-top: 9px;
   padding-bottom: 9px;
   font-family: "Poppins", "Verdana", sans-serif;
@@ -77,8 +79,10 @@
 
 .login label + a {
   display: block;
+  width: 140px;
   margin-top: 5px;
   margin-bottom: 45px;
+  margin-left: auto;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;

@@ -25,6 +25,10 @@
 .new h2 + a {
   display: block;
   position: relative;
+  z-index: 2;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 58px;
   font-size: 16px;
   font-weight: 500;

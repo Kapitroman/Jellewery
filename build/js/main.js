@@ -262,7 +262,8 @@
     questions[i].classList.add('hiden');
     questionArrows[i].classList.add('rotated');
   }
-  questionsList.addEventListener('click', function (evt) {
+
+  function toggleTab(evt) {
     var question = evt.target.closest('.faq__item');
     if (question) {
       if (question.querySelector('p').classList.contains('hiden')) {
@@ -272,6 +273,16 @@
         question.querySelector('p').classList.add('hiden');
         question.querySelector('.faq__wrap-svg').classList.add('rotated');
       }
+    }
+  }
+
+  questionsList.addEventListener('click', function (evt) {
+    toggleTab(evt);
+  });
+
+  questionsList.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Enter' || evt.keyCode === 13) {
+      toggleTab(evt);
     }
   });
 
@@ -491,7 +502,7 @@
   var filterGroups = filter.querySelectorAll('.filter__group');
   var filterArrows = filter.querySelectorAll('.filter__wrap-svg');
 
-  function clickSubHeaderHandler(evt) {
+  function toggleSubHeader(evt) {
     var subHead = evt.target.closest('.filter__section h3');
     if (subHead) {
       if (this.querySelector('.filter__group').classList.contains('hidden')) {
@@ -509,7 +520,20 @@
   for (var i = 0; i < filterGroups.length; i++) {
     filterGroups[i].classList.add('hidden');
     filterArrows[i].classList.add('rotated');
-    filterSections[i].addEventListener('click', clickSubHeaderHandler);
+
+    filterSections[i].addEventListener('click', function (i) {
+      return function (evt) {
+        toggleSubHeader.call(filterSections[i], evt);
+      }
+    }(i));
+
+    filterSections[i].addEventListener('keydown', function (i) {
+      return function (evt) {
+        if (evt.key === 'Enter' || evt.keyCode === 13) {
+          toggleSubHeader.call(filterSections[i], evt);
+        }
+      }
+    }(i));
   }
 
 }) ();

@@ -897,6 +897,10 @@
 .new h2 + a {
   display: block;
   position: relative;
+  z-index: 2;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 58px;
   font-size: 16px;
   font-weight: 500;
@@ -1137,6 +1141,9 @@
 .blog h2 + a {
   display: block;
   position: relative;
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -1526,9 +1533,12 @@
   text-align: center;
   color: #1d1613; }
 
-.chjewellery a {
+.chjewellery h2 + a {
   display: block;
   position: relative;
+  width: 74px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 63px;
   font-size: 16px;
   font-weight: 500;
@@ -1537,7 +1547,7 @@
   color: #1d1613;
   text-decoration: none; }
 
-.chjewellery a::after {
+.chjewellery h2 + a::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1547,6 +1557,12 @@
   background-color: #a87b62;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
+
+.chjewellery h2 + a:hover {
+  color: rgba(0, 0, 0, 0.75); }
+
+.chjewellery h2 + a:focus {
+  outline: 1px solid #1d1613; }
 
 .chjewellery__wrap {
   display: -webkit-box;
@@ -1749,8 +1765,9 @@
   color: #1d1613;
   text-decoration: none; }
 
-.catalog__translate--next {
-  padding-left: 34px; }
+.catalog__wrap-next {
+  width: 69px;
+  padding-left: 33px; }
 
 .catalog__panagination-list {
   display: -webkit-box;
@@ -1857,7 +1874,8 @@
             justify-content: center;
     padding-top: 15px;
     padding-bottom: 22px; }
-  .catalog__translate {
+  .catalog__translate,
+  .catalog__wrap-next {
     display: none; }
   .catalog__panagination-item a {
     padding-left: 12px;
@@ -1929,8 +1947,11 @@
   display: none; }
 
 .filter__group label {
+  display: inline-block;
+  margin-right: auto;
   margin-bottom: 13px;
   padding-left: 35px;
+  padding-right: 10px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -2624,8 +2645,10 @@
 
 .login label + a {
   display: block;
+  width: 140px;
   margin-top: 5px;
   margin-bottom: 45px;
+  margin-left: auto;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;

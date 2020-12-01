@@ -70,8 +70,11 @@
 }
 
 .filter__group label {
+  display: inline-block;
+  margin-right: auto;
   margin-bottom: 13px;
   padding-left: 35px;
+  padding-right: 10px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
