@@ -71,6 +71,7 @@
 
   var slidesWrap = slider.querySelector('.new__swiper-wrapper');
   var slides = slider.querySelectorAll('.new__swiper-slide');
+  var slidesImg = slider.querySelectorAll('.new__swiper-slide img');
   var panagination = slider.querySelector('.new__swiper-pagination');
   var leftArrow = slider.querySelector('.new__swiper-button-prev');
   var rightArrow = slider.querySelector('.new__swiper-button-next');
@@ -81,6 +82,8 @@
   var listeners;
   var offset;
   var numberSwap;
+  var sliderWidth;
+  var slideWidth;
 
   var startX = 0;
   var endX = 0;
@@ -99,7 +102,6 @@
       panaginationItems = null;
     }
     listeners = false;
-    offset = 320;
     slidesWrap.style.marginLeft = '-30px';
   }
 
@@ -130,11 +132,6 @@
       rightArrow.removeAttribute('disabled');
     }
     listeners = true;
-    if (numberShowPanagination === 2) {
-      offset = 708;
-    } else {
-      offset = 1200;
-    }
     slidesWrap.style.marginLeft = '-30px';
   }
 
@@ -217,16 +214,19 @@
 
   if (window.innerWidth < 768) {
     typeScreen = 'mobile';
+    offset = 320;
     getMobileSlider();
   }
 
   if (window.innerWidth >= 768 && window.innerWidth < 1024) {
     typeScreen = 'tablet';
+    offset = 708;
     getWideSlider(2);
   }
 
   if (window.innerWidth >= 1024) {
     typeScreen = 'desktop';
+    offset = 0.8565 * window.innerWidth + 30;
     getWideSlider(4);
   }
 
@@ -235,6 +235,13 @@
       return;
     }
     if (window.innerWidth < 768 && typeScreen !== 'mobile') {
+      offset = 320;
+      slider.style.width = '290px';
+      slidesWrap.style.width = '1920px';
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = '130px';
+        slidesImg[i].style.height = '136px';
+      }
       typeScreen = 'mobile';
       panagination.innerHTML = '';
       getMobileSlider();
@@ -243,17 +250,43 @@
       return;
     }
     if (window.innerWidth >= 768 && window.innerWidth < 1024 && typeScreen !== 'tablet') {
+      offset = 708;
+      slider.style.width = '678px';
+      slidesWrap.style.width = '4248px';
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = '324px';
+        slidesImg[i].style.height = '340px';
+      }
       typeScreen = 'tablet';
       panagination.innerHTML = '';
       getWideSlider(2);
     }
-    if (window.innerWidth >= 1024 && typeScreen === 'desktop') {
-      return;
-    }
-    if (window.innerWidth >= 1024 && typeScreen !== 'desktop') {
-      typeScreen = 'desktop';
-      panagination.innerHTML = '';
-      getWideSlider(4);
+    if (window.innerWidth >= 1024) {
+      numberSwap = 0;
+      slidesWrap.style.marginLeft = '-30px';
+      sliderWidth = 0.8565 * window.innerWidth;
+      slider.style.width = sliderWidth + 'px';
+      slideWidth = (sliderWidth - 90) / 4;
+      slidesWrap.style.width = ((slideWidth + 30) * 12) + 'px';
+      offset = sliderWidth + 30;
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = slideWidth + 'px';
+        slidesImg[i].style.height = slideWidth * 1.0518 + 'px';
+      }
+      for (var j = 0; j < panaginationItems.length; j++) {
+        if (panaginationItems[j].classList.contains('active')) {
+          panaginationItems[j].classList.remove('active');
+        }
+      }
+      panaginationItems[numberSwap].classList.add('active');
+      if (typeScreen === 'desktop') {
+        return;
+      }
+      if (typeScreen !== 'desktop') {
+        typeScreen = 'desktop';
+        panagination.innerHTML = '';
+        getWideSlider(4);
+      }
     }
   }, false);
 

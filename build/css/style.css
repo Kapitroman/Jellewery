@@ -990,10 +990,12 @@
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  overflow: hidden; }
 
 .new__swiper-slide img {
-  pointer-events: none; }
+  pointer-events: none;
+  width: 100%; }
 
 .new__swiper-slide p {
   margin: 0;
@@ -2497,12 +2499,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 320px;
     margin-top: -30px;
     padding-top: 0;
     padding-bottom: 25px;
-    padding-left: 4.69%;
-    padding-right: 4.69%; }
+    width: 290px;
+    padding-left: 0;
+    padding-right: 0; }
   .card__necklace-images {
     display: -webkit-box;
     display: -ms-flexbox;

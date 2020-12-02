@@ -93,10 +93,14 @@
   padding: 0;
   text-decoration: none;
   user-select: none;
+
+  overflow: hidden;//
 }
 
 .new__swiper-slide img {
   pointer-events: none;
+
+  width: 100%;
 }
 
 .new__swiper-slide p {
