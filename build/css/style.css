@@ -327,10 +327,19 @@
     padding-left: 5.86%;
     padding-right: 5.86%; }
   .page-header__navigator.menu-opened {
-    min-height: 778px;
+    display: block;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: #a87b62; }
   .menu-opened .page-header__wrap-position {
     position: relative;
+    min-height: 778px;
     padding-bottom: 124px; }
   .page-header__main-menu {
     -webkit-box-pack: start;
@@ -408,10 +417,19 @@
   .page-header__menu-list {
     display: none; }
   .menu-opened .page-header__menu-list {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: auto;
     padding-top: 95px;
     padding-bottom: 20px;
     padding-left: 0; }
+  .menu-opened .page-header__menu-list li {
+    margin-right: auto; }
   .menu-opened .page-header__menu-list li + li {
     margin-top: 21px;
     margin-left: 0; }
@@ -421,9 +439,17 @@
     line-height: 36px;
     color: #ffffff; }
   .menu-opened .page-header__submenu-list {
-    display: block;
-    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 18px;
     padding-bottom: 20px; }
+  .menu-opened .page-header__submenu-list li {
+    margin-right: auto; }
   .menu-opened .page-header__submenu-list li + li {
     margin-top: 20px; }
   .menu-opened .page-header__submenu-list li a {
@@ -486,9 +512,8 @@
   .page-header__navigator {
     padding-left: 4.69%;
     padding-right: 4.69%; }
-  .page-header__navigator.menu-opened {
-    min-height: 684px; }
   .menu-opened .page-header__wrap-position {
+    min-height: 684px;
     padding-bottom: 82px; }
   .page-header__main-menu {
     padding-top: 20px;

@@ -32,15 +32,32 @@
 
   var navigator = document.querySelector('.page-header__navigator');
   var menuButton = navigator.querySelector('.page-header__toggle-menu');
+  var body = document.querySelector('body');
+  var menuOpened = false;
 
   navigator.classList.remove('menu-opened');
   menuButton.addEventListener('click', function () {
     if (navigator.classList.contains('menu-opened')) {
       navigator.classList.remove('menu-opened');
+      body.classList.remove('body-lock');
+      menuOpened = false;
     } else {
       navigator.classList.add('menu-opened');
+      body.classList.add('body-lock');
+      menuOpened = true;
     }
   });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 1024 && !menuOpened) {
+      return;
+    }
+    if (window.innerWidth >= 1024 && menuOpened) {
+      navigator.classList.remove('menu-opened');
+      body.classList.remove('body-lock');
+      menuOpened = false;
+    }
+  }, false);
 
 })();
 
