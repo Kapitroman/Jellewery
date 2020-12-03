@@ -129,14 +129,15 @@
   min-height: 33px;
   justify-content: center;
   align-items: center;
-  margin-left: -5px;
+  margin-left: -3px;
 }
 
 .new__button-panagination {
   display: block;
   border: none;
-  margin-left: 5px;
+  margin-left: 3px;
   padding: 5px;
+  font-family: "Poppins", "Verdana", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -215,6 +216,10 @@
     margin-bottom: 54px;
   }
 
+  .new h2 + a::after {
+    bottom: -3px;
+  }
+
   .new__slider {
     max-width: auto;
     width: 678px;
@@ -244,7 +249,7 @@
   }
 
   .new--card {
-    padding-bottom: 58px;
+    padding-bottom: 59px;
   }
 
   .new h2 + a {

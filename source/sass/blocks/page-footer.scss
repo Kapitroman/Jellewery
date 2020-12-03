@@ -32,7 +32,7 @@
   font-size: 34px;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.023em;
   color: #ffffff;
 }
 
@@ -48,6 +48,7 @@
 .page-footer__subscribe form {
   display: flex;
   margin-top: auto;
+  margin-bottom: 3px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ffffff;
 }
@@ -55,8 +56,8 @@
 .page-footer__subscribe input {
   display: block;
   width: 100%;
-  min-height: 31px;
-  padding-top: 5px;
+  min-height: 33px;
+  padding-top: 7px;
   padding-bottom: 5px;
   margin-right: 15px;
   border: none;
@@ -191,6 +192,11 @@
     min-height: 149px;
     padding-right: 13px;
     margin-bottom: 40px;
+  }
+
+  .page-footer__subscribe form {
+    margin-bottom: 0;
+    padding-bottom: 3px;
   }
 
   .page-footer__wrap-links {
