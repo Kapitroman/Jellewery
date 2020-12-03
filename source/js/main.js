@@ -37,12 +37,14 @@
 
   navigator.classList.remove('menu-opened');
   menuButton.addEventListener('click', function () {
-    if (navigator.classList.contains('menu-opened')) {
+    if (navigator.classList.contains('modal-opened')) {
+      navigator.classList.remove('modal-opened');
       navigator.classList.remove('menu-opened');
       body.classList.remove('body-lock');
       menuOpened = false;
     } else {
       navigator.classList.add('menu-opened');
+      navigator.classList.add('modal-opened');
       body.classList.add('body-lock');
       menuOpened = true;
     }
@@ -53,6 +55,7 @@
       return;
     }
     if (window.innerWidth >= 1024 && menuOpened) {
+      navigator.classList.remove('modal-opened');
       navigator.classList.remove('menu-opened');
       body.classList.remove('body-lock');
       menuOpened = false;

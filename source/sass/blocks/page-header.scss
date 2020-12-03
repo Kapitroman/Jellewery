@@ -260,6 +260,10 @@
   }
 
   .page-header__navigator.menu-opened {
+    background-color: #a87b62;
+  }
+
+  .page-header__navigator.modal-opened {
     display: block;
     position: fixed;
     overflow: auto;
@@ -269,7 +273,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #a87b62;
+    z-index: 2;
   }
 
   .menu-opened .page-header__wrap-position {
